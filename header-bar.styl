@@ -1,0 +1,294 @@
+@import "variables"
+
+$bg_header
+    background-image: url(i/header.png)
+    background-repeat: no-repeat
+
+$zIndexPopList = 550
+$zIndexDropMenu = 555
+
+$nav_item
+    float: left
+    padding-left: 8px
+    padding-top: 7px
+    padding-top: 9pxunquote("\9")
+
+$menu_item
+    &.drop-wrap
+        zoom: 1
+        position: relative
+        padding-top: 3px
+        margin-right: -1px
+        padding-left: 0
+        .drop-menu
+            /* 用于遮住下方弹出层的上边框 */
+            z-index: $zIndexDropMenu
+            zoom: 1
+            position: relative
+            height: 18px
+            height: 17pxunquote("\9")
+            padding: 4px 9px
+            padding-top: 6pxunquote("\9")
+            &.active
+                padding: 3px 8px
+                border: 1px solid #f8cfa5
+                border-bottom-color: #fff
+                background: #fff
+                padding-top: 5px unquote("\9")
+        .pp_msg
+            left: 0
+            top: 28px
+            strong
+                margin-right: 7px
+                color: #c00
+        .pop-panel
+            position: absolute
+            visibility: hidden
+            border: 1px solid #f8cfa5
+            padding: 5px 9px
+            background: #fff
+            color: #61646e
+        .pop-panel.pp-msg_list
+            padding: 1px
+            width: 138px
+            z-index: 552
+            left: 0
+            top: 28px
+            li 
+                margin-bottom: 0
+                line-height: 1.5
+                a
+                    padding: 4px 0 4px 10px
+                    text-align: left
+                    color: #666
+                    display: inline-block
+                    *display: inline
+                    overflow: hidden
+                    zoom: 1
+                    vertical-align: middle
+                a:hover 
+                    background-color: #ebebff !important
+                    color: #666
+                    text-decoration: none
+                a.ignore:hover
+                    color: #c00
+                    background: none !important
+        .pop-panel.pp_user-center
+            padding-right: 0
+            width: 70px
+            top: 25px
+            li
+                margin-bottom: 3px
+                a
+                    @extend $bg_header
+                    float:none
+                    padding-left: 3px
+                    line-height: 18px
+
+
+$header_menu
+    line-height: 14px
+    color: #999
+    .mi
+        @extend menu_item
+    .item,a
+        float: left
+        padding-right: 7px
+    a
+        color: #61646e
+        &:hover  
+            color: red
+    .first
+        background: none
+
+
+.header-bar
+    @extend $bg_header
+    width: 100%
+    min-width: 960px
+    height: 30px
+    background-position: 0 0
+    background-repeat: repeat-x
+    overflow: visible
+    .inner
+        width: 960px
+        margin: 0 auto
+        font-family: Tahoma, sans-serif
+        line-height: 28px
+        line-height: 29pxunquote("\9")
+        color: #999
+        .tagline
+            @extend nav_item
+            padding-left: 0
+            line-height: 14px
+        .user-action,.quick-menu
+            @extend $header_menu
+            float: left
+            .user-signup
+                padding-left: 4px
+                background: none
+        
+            @extend $header_menu
+            float: right
+            margin-left: -100px
+            .mi.last
+                margin-right: 0
+    
+
+
+// .header-bar
+//     
+//     a
+//         color: #61646e
+//         &:hover
+//             color: red
+//             text-decoration: underline
+
+// .header-bar .i-mobile
+//     @extend $bg_header
+//     padding: 7px 0 1px 15px
+//     background-position: -80px -478px
+//     a
+//         font-weight: bold
+//         color: orange
+
+
+// .header-bar 
+//     .drop-wrap
+//         zoom: 1
+//         position: relative
+//         margin-right: -1px
+//         height: 18px
+//         height: 17pxunquote("\9")
+//         padding: 4px 24px 3px 9px
+//         padding-top: 3px
+//         padding-top: 6pxunquote("\9")
+//     .drop-menu:hover
+//         text-decoration: none
+//     .active
+//         padding: 3px 23px 3px 8px
+//         border: 1px solid #F8CFA5
+//         border-bottom-color: #FFF
+//         background: #FFF
+//         padding-top: 5pxunquote("\9")
+//     .drop-icon
+//         @extend $bg_header
+//         display: block
+//         position: absolute
+//         right: 7px
+//         top: 5px
+//         width: 13px
+//         height: 13px
+//         background-position: -97px -450px
+//         cursor: pointer
+//     .active .drop-icon
+//         right: 6px
+//         top: 4px
+//     .user-action
+//         float: left
+//         em
+//             color: red
+//     
+//     .user-logged .greeting
+//         padding-right: 0
+//     .i-msg .drop-menu
+//         padding-right: 10px
+//         span
+//             margin-left: 2px
+//             padding: 0 4px
+//             font-size: 11px
+//             color: #FFF
+//             border-radius: 3px
+//             background: #E71600
+//     .i-msg .active
+//         padding-right: 9px
+
+
+
+
+
+// .header .user-action .no-devide
+//     background: none
+
+// .J_auto-load,
+// .J_lazy-load
+//     display: none
+//     position: absolute
+
+// .pop-panel_list li a
+//     @extend $bg_header
+//     padding-left: 3px
+//     background-position: -169px -418px
+//     *background-position: -169px -420px
+
+// .pop-panel_list li a:hover
+//     @extend $bg_header
+//     background-position: -169px -438px
+//     *background-position: -169px -440px
+
+// .pp_msg strong
+//     margin-right: 7px
+//     color: #C00
+
+// .pp_msg a
+//     float: none
+//     color: #6666CC
+//     background: none !important
+
+// .pp_msg a.c-gray
+//     color: #999
+//     text-decoration: underline
+//     width: auto
+
+// .pp_msg li a.c-gray:hover
+//     color: #CC0000
+//     background: none !important
+
+// .pp_group-nav
+//     width: 90px
+
+// .pp-msg_list
+//     padding: 1px
+//     width: 138px
+//     z-index: $zIndexPopList
+//     left: 0
+//     top: 28px
+
+// .pp-msg_list li
+//     margin-bottom: 0
+//     line-height: 1.5
+
+// .pp-msg_list li a
+//     width: 128px
+//     padding: 4px 0 4px 10px
+//     text-align: left
+//     color: #666
+//     display: inline-block
+//     *display: inline
+//     overflow: hidden
+//     zoom: 1
+//     vertical-align: middle
+
+// .pp-msg_list li a:hover
+//     background-color: #EBEBFF !important
+//     color: #666
+//     text-decoration: none
+
+// .pp_user-center
+//     padding-right: 0
+//     width: 70px
+//     top: 25px
+
+// .header-bar .pp_user-center
+//     left: 0
+
+// .pp_user-center li
+//     margin-bottom: 3px
+
+// .pp_user-center li a
+//     float: none
+//     line-height: 18px
+
+
+
+

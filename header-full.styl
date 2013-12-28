@@ -1,0 +1,589 @@
+@import nib
+
+// 频道切换菜单
+zIndexChannelMenu = 535
+// 城市切换层
+zIndexLocation = 520
+// 频道tab层
+zIndexHeaderTabs = 510
+// 大黄横条
+zIndexNavBar = 505
+
+// new, hot, 1元团购等
+zIndexHeaderTip = 30
+
+$bg_header
+  background-image: url(i/header.png)
+  background-repeat: no-repeat
+
+$bg_comm
+  background-image: url(i/comm.png)
+  background-repeat: no-repeat  
+
+.header a
+  color: #61646E
+
+.header a:hover
+  color: #C00
+
+.pop-panel_list li a,  
+.header-bar .hd-menu .i-mobile,
+.header-bar .switch-new
+  @extend $bg_header
+
+.group-nav .pp-trigger
+  @extend $bg_comm
+  
+.header
+  clearfix()
+  width: 960px
+  margin: 0 auto
+
+.header .logo
+  float: left
+  margin-right: 12px
+  line-height: 0
+
+.header .location
+  float: left
+  margin: 15px 12px 0 0
+  position: relative
+  z-index: zIndexLocation
+
+.header .location .Fix
+  clearfix()
+
+.header .loc-btn
+  @extend $bg_header
+  float: left
+  padding-left: 2px
+  background-position: 0 -181px
+  cursor: pointer
+
+.header .loc-btn .txt
+  @extend $bg_header
+  float: left
+  display: block
+  height: 28px
+  padding: 0 36px 0 5px
+  font-size: 1.2em
+  line-height: 28px
+  background-position: right -181px
+
+.header .loc-btn:hover
+  text-decoration: none
+  color: #61646e
+
+.header .nav
+  position: relative
+  float: left
+  margin-top: 24px
+  z-index: zIndexHeaderTabs
+
+.header .nav li
+  zoom: 1
+  position: relative
+  float: left
+  margin-right: 1px
+
+.header .nav a
+  @extend $bg_header
+  float: left
+  padding-left: 2px
+  border-bottom: 1px solid #FB9B25
+  background-position: 0 -85px
+  cursor: pointer
+
+.header .nav strong
+  @extend $bg_header
+  float: left
+  display: block
+  height: 27px
+  padding: 0 20px
+  font-size: 1.2em
+  font-weight: normal
+  line-height: 27px
+  background-position: right -85px
+
+.header .nav .this a
+  border-bottom: 1px solid #F88E03
+  background-position: 0 -149px
+
+.header .nav .this a:hover
+  text-decoration: none
+  background-position: 0 -149px
+
+.header .nav .this strong, 
+.header .nav .this a:hover strong
+  font-weight: bold
+  color: #fff
+  background-position: right -149px
+
+.nav-bar
+  @extend $bg_header
+  position: relative
+  top: -2px
+  clear: both
+  padding-right: 2px
+  height: 50px
+  background-position: right -214px
+  z-index: zIndexNavBar
+  width:958px
+  margin:0 auto 10px
+
+.channel
+  @extend $bg_header
+  float: left
+  padding-right: 22px
+  height: 50px
+  background-position: 0 -214px
+
+.chan-btn
+  @extend $bg_header
+  float: left
+  margin-top: 7px
+  background-position: 119px -460px
+  cursor: pointer
+
+.chan-btn:hover
+  text-decoration: none
+
+.channel-opened .chan-btn
+  background-image: none
+
+.chan-btn .txt
+  float: left
+  display: block
+  width: 131px
+  height: 35px
+  padding-left: 15px
+  font-size: 1.2em
+  line-height: 35px
+  color: #C00
+
+.s-box
+  @extend $bg_header
+  float: left
+  width: 501px
+  height: 50px
+  padding-right: 20px
+  line-height: 48px
+  background-position: 0 -269px
+  background-repeat: repeat-x
+
+.s-box label
+  float: left
+  margin-right: 5px
+  font-size: 1.2em
+  line-height: 48px
+  color: #FFF
+
+.s-wrap
+  @extend $bg_header
+  float: left
+  margin-top: 7px
+  border: solid #FF9D55
+  border-width: 1px 2px 2px 1px
+  background-position: 0 -323px
+  background-repeat: repeat-x
+
+.s-wrap-inner
+  @extend $bg_header
+  zoom: 1
+  float: left
+  position: relative
+  width: 343px
+  padding-right: 25px
+  border: solid #BC7202
+  border-width: 1px 0 0 1px
+  background-position: 345px -425px
+
+.s-box .cate-select
+  @extend $bg_header
+  float: left
+  height: 29px
+  margin-right: 5px
+  padding: 0 13px 0 9px
+  font-size: 1.2em
+  line-height: 29px
+  background-position: right -472px
+
+.s-box .cate-select:hover
+  text-decoration: none
+  color: #61646E
+
+.s-box span.cate-select
+  margin-right: 0
+  background-image: none
+
+.s-wrap input
+  float: left
+  margin-right: -100px
+  width: 280px
+  padding: 6px 0
+  height: 17px
+  font-size: 14px
+  line-height: 17px
+  border: none
+  background: none
+
+.s-box .s-btn
+  @extend $bg_header
+  float: left
+  width: 65px
+  height: 36px
+  margin-top: 6px
+  padding-bottom: 3px
+  *padding-bottom: 0
+  font-size: 1.2em
+  font-weight: bold
+  color: #C00
+  border: none
+  background-position: -26px -421px
+  background-color: #FEFCF5
+  cursor: pointer
+
+.bar-extra
+  @extend $bg_header
+  float: right
+  margin-left: -50px
+  padding: 16px 0 0 10px
+  width: 270px
+  height: 34px
+  color: #FFF
+  background-position: 0 -269px
+  background-repeat: repeat-x
+  line-height: 16px
+  overflow: hidden
+
+.popular dt,.popular dd,.popular .keyword
+  float: left
+
+.popular dt
+  width: 60px
+
+.popular dd
+  margin-right: -10px
+  width: 210px
+  height: 16px
+  overflow: hidden
+
+.popular .keyword
+  display: block
+  margin-right: 8px
+  text-decoration: underline
+  color: #FFF
+  white-space: nowrap
+
+.popular .keyword:hover
+  text-decoration: none
+  color: #fff
+
+.group-nav
+  padding-right: 10px
+
+.group-nav .pp-trigger
+  float: right
+  display: block
+  padding-right: 10px
+  height: 20px
+  color: #fff
+  background-position:right -228px
+  background-position: right -230pxunquote("\9")
+
+.powered
+  display: block
+  float: left
+  width: 110px
+  height: 38px
+  margin-right: 12px
+
+.powered a
+  font-weight: bold
+  color: #66C
+
+.powered a:hover
+  color: #FFF
+  background-color: #66C
+
+.nav .icon, .pp_quick-nav .icon
+  position: absolute
+  display: block
+  width: 23px
+
+.nav .icon
+  @extend $bg_header
+  right: 0
+  top: -5px
+  height: 12px
+
+.pp_quick-nav .icon
+  @extend $bg_header
+  right: -27px
+  top: 4px
+  height: 9px
+
+.header .nav .i-new, .pp_quick-nav .i-new
+  background-position: -30px -468px
+  width: 23px
+  height: 12px
+  right: 4px
+  top: -5px
+
+.header .nav .i-hot, .pp_quick-nav .i-hot
+  background-position: -30px -486px
+  width: 23px
+  height: 12px
+  right: 4px
+  top: -5px
+
+.header .nav .nav-tg
+  z-index: 3 // 用于使其比其他tab层级高，这样上面的一元团购的tip就可以覆盖到其他元素上
+
+.header .nav .i-1yuan
+  right: -6px
+  top: -9px
+  height: 16px
+  width: 30px
+  background-image: none
+  z-index: zIndexHeaderTip
+
+.header .nav .i-promote
+  background: url("i/i-prom.gif") no-repeat
+  width: 27px
+  height: 19px
+  top: -9px
+
+
+.pp_location
+  width: 377px
+  overflow: hidden
+  left: 0
+  top: 26px
+  // z-index: 550
+
+.pp_location dl
+  margin-bottom: 8px
+  padding-bottom: 8px
+  border-bottom: 1px dashed #E4E4E4
+  overflow: hidden
+  zoom: 1
+
+.pp_location dl.last
+  margin-bottom: 0
+  border: none
+
+.pp_location dt
+  float: left
+  width: 60px
+  color: #999
+
+.pp_location dd
+  margin-left: 60px
+  margin-right: -10px
+  padding-top: 1pxunquote("\9")
+
+.pp_location dl.label-free
+  padding-bottom: 0
+
+.pp_location dl.label-free dd
+  margin-left: 0
+
+.pp_location li
+  float: left
+  width: 48px
+  margin: 0 5px 1px 0
+
+.pp_location .more
+  float: right
+  padding: 0 1px
+  color: #66C
+
+.pp_location .more:hover
+  text-decoration: none
+  color: #FFF
+  background: #66C
+
+.pp_channels
+    width: 138px
+    padding: 0
+    border-width: 0 0 2px 1px
+    top: 41px
+    left: 5px
+
+.pp_channels .root-item
+  @extend $bg_header
+  zoom: 1
+  position: relative
+  width: 139px
+  height: 34px
+  background-position: -13px -373px
+  overflow: visible
+  vertical-align: middle
+
+.pp_channels .root-name
+  @extend $bg_header
+  display: block
+  position: relative
+  border-top: 1px solid #f8cfa5
+  padding-left: 10px
+  background-position: -10px -358px
+  cursor: pointer
+  z-index: zIndexChannelMenu
+
+.pp_channels .root-name span
+  @extend $bg_header
+  position: relative
+  display: block
+  border-right: 1px solid #f8cfa5
+  padding-left: 9px
+  height: 34px
+  font-size: 1.2em
+  line-height: 34px
+  color: #000
+  background-position: -167px -358px
+
+.pp_channels .root-name:hover span
+  color:#c00
+  border-color:#fff
+
+.pp_channels .root-name span .icon
+  position: absolute
+  top: 13px
+  display: block
+  width: 23px
+  height: 9px
+  padding: 0
+  border: none
+
+.pp_channels .root-name .i-icon2 .icon
+  left: 42px
+  background-position: 0 -640px
+
+.pp_channels .root-name .i-icon4 .icon
+  left: 72px
+  background-position: 0 -640px
+
+.pp_channels .active .root-name
+  background: #fff
+
+.pp_channels .active .root-name span
+  color: #C00
+  border-color: #fff
+
+.pp_channels .no-sub .root-name span
+  border-color: #fff
+  background-position: 20px -358px
+
+.pp_channels .sub-list
+  left: 138px
+  top: -34px
+  padding: 5px 2px 5px 16px
+  width: 200px
+  overflow: hidden
+  _top: -35px
+
+.pp_channels .active .sub-list
+  visibility: visible
+
+.pp_channels .sub-list li
+  float: left
+  width: 83px
+  margin: 0 10px 5px 0
+
+.pp_channels .sub-list li a
+  @extend $bg_header
+
+.pp_channels .sub-list .main-cate
+  width: 200px
+  margin-right: -10px
+  font-weight: bold
+
+.pp_channels .sub-list a
+  padding-left: 3px
+  background-position: -169px -418px
+  *background-position: -169px -420px
+
+.pp_channels .sub-list a:hover
+  background-position: -169px -438px
+  *background-position: -169px -440px
+
+.pp_search-range
+  border-top: 0
+  padding-top: 0
+  top: 28px
+  left: 0
+
+.pp_search-range li
+  margin-bottom: 2px
+  line-height: 18px
+
+/*搜索suggestion*/
+.pp_search-suggest
+  top: 29px
+  left: 0
+  width: 359px
+  padding: 5px 4px
+  background-color: #fff
+  position: absolute
+
+.pp_search-suggest li
+  padding: 0 8px
+  color: #333
+  line-height: 21px
+  cursor: pointer
+  overflow: hidden
+  zoom: 1
+
+.pp_search-suggest .keyword
+  float: left
+  margin-right: 8px
+  font-weight: normal
+
+.pp_search-suggest .related
+  float: left
+
+.pp_search-suggest .count
+  float: right
+  color: #008000
+
+/* suggest中高亮显示关键字 */
+.pp_search-suggest 
+  em
+    color: #66c
+  .ac-type-spliter
+    border-bottom: 1px dashed #ccc
+    padding: 0
+    margin: 8px 0
+    *margin:0
+    height: 0
+    line-height: 0
+    cursor: default
+  .ac-type-title
+    cursor: default
+  .ac-type-title .keyword
+    color:#999
+  .ac-type-log .remove
+    float: right
+    text-align: center
+    color:#fff
+    display:none
+  .ac-shoparound 
+    .keyword
+      color:#008000
+      strong
+        color:#66c
+        font-weight: normal
+  .active
+    text-decoration: none
+    color: #FFF
+    background: #66C
+    em,.name,.region,.count
+      color: #FFF
+    .remove
+      display:block
+    .keyword
+      color:#fff
+      strong
+        color:#fff
+
